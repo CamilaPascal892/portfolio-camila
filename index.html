@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio de Camila</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+
+  <nav class="nav-pollock">
+    <ul>
+      <li><a href="#sobre-mi" class="nav-link active">Sobre mí</a></li>
+      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>¡Bienvenido a mi perfil! 👧 </h1>
+      <p>Aquí los saluda una desarrolladora en formación y amante del código 🖥️💜</p>
+      <a href="#" id="btnConoceme" class="btn">Conoceme más</a>
+    </div>
+  </header>
+
+  <div id="contenido-oculto" class="oculto">
+    <section id="sobre-mi" class="seccion">
+      <h2>👧Sobre mí... ¿Quién soy?🎀</h2>
+      <p>Tengo 29 años, estudio la Tecnicatura Superior en Programación, amo a mi perro Teo🐶 y me apasiona crear cosas con código💻. 
+        🗺️Vivo en Coronel Pringles, Provincia de Buenos Aires, Argentina. 
+        Soy muy exigente por lo que busco perfeccionarme para continuar mejorando y reversionando las cosas que realizo. 
+        También soy una apasionada de la Historia📜 y me gusta combinar la programación con la docencia👩‍🏫.  
+      </p>
+    </section>
+
+    <section id="habilidades" class="seccion">
+      <h2>🧠Habilidades</h2>
+      <ul class="habilidades-lista">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C#</li>
+        <li>Codeblocks</li>
+      </ul>
+    </section>
+
+    <section id="proyectos" class="seccion">
+      <h2>💻👧🔧Proyectos</h2>
+      <div class="proyectos-container">
+        <div class="tarjeta">
+          <h3>💻👧🔧Proyecto 1: La casa de hamburguesas Elena de Troya</h3>
+          <p>Es un proyecto de gestión desarrollado en CodeBlocks de una casa de hamburguesas destinado a poder ver varidades de menues, procesamiento de precios y datos de tanto clientes como trabajadores del emprendimiento.</p>
+          <a href="https://github.com/CamilaPascal892/Elena-de-Troya-Hamburgueser-a">Ver repositorio</a>
+        </div>
+        <div class="tarjeta">
+          <h3>💻👧🔧Proyecto 2: PaiLab</h3>
+          <p>Es un proyecto desarollado en #C que se encarga de la gestión de revendedores de distintos productos, puntos del país, beneficios de cada uno de ellos. También se pueden encontrar los datos de los administrativos que gestionan la reventa de productos.</p>
+          <a href="https://github.com/CamilaPascal892/PaiLabProyecto">Ver repositorio</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion">
+      <h2>💌Contacto</h2>
+      <p>Podés escribirme a: <a href="mailto:camilabelenpascal@gmail.com">camilabelenpascal@gmail.com</a>. 
+      También me podés encontrar en mis redes sociales.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 - Portfolio de Camila Pascal</p>
+    </footer>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal oculto">
+    <div class="modal-content">
+      <span id="cerrarModal" class="close">&times;</span>
+      <h2>Un poco más sobre mí</h2>
+      <p><strong>🎯 Enfoque como desarrolladora</strong></p>
+      <p>Considero que programar no es solo escribir código, sino resolver problemas con sensibilidad y precisión. </p>
+      <p>💜 Creo en el aprendizaje constante y escribir código limpio.</p>
+      <p>🛠️ Me gusta entender a fondo los problemas antes de escribir una línea.</p>
+      <p>🌱 Siempre estoy explorando nuevas herramientas y formas de mejorar.</p>
+      <p><strong>🚀 Mi camino hasta ahora</strong></p>
+      <ul>
+        <li>2023 — Descubrí la programación 💡</li>
+        <li>2024 — Aprendí a utilizar Codeblocks y realicé mis primeros pasos. 🚀</li>
+        <li>2025 — Continúe capacitándome y adquirí habilidades en C#, HTML, CSS, JavaScrip y base de datos. 📚</li>
+        <li>Hoy — En construcción...💻</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
