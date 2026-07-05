@@ -3,95 +3,283 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio de Camila</title>
+  <title>Camila Pascal - Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
 
-  <nav class="nav-pollock">
-    <ul>
-      <li><a href="#sobre-mi" class="nav-link active">Sobre mí</a></li>
-      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-      <li><a href="#contacto" class="nav-link">Contacto</a></li>
-    </ul>
-  </nav>
+  <!-- FONDO DE PARTÍCULAS SIEMPRE ACTIVO Y COMPLETO -->
+  <div id="particles-js"></div>
 
-  <!-- HEADER -->
-  <header class="hero">
-    <div id="particles-js"></div>
-    <div class="hero-content">
-      <h1>¡Bienvenido a mi perfil! 👧 </h1>
-      <p>Aquí los saluda una desarrolladora en formación y amante del código 🖥️💜</p>
-      <a href="#" id="btnConoceme" class="btn">Conoceme más</a>
+  <!-- PANTALLA DE INGRESO (LANDING HERO OVERLAY) -->
+  <div id="landing-screen" class="landing-hero">
+    <div class="landing-content">
+      <img src="img/logo.png" alt="Pascal Digital Logo" class="hero-logo-large" />
+      <h1>CAMILA PASCAL</h1>
+      <p class="hero-subtitle-large">Desarrolladora de Software & Marketer Digital</p>
+      <button id="btnConoceme" class="btn">Conoceme más</button>
     </div>
-  </header>
-
-  <div id="contenido-oculto" class="oculto">
-    <section id="sobre-mi" class="seccion">
-      <h2>👧Sobre mí... ¿Quién soy?🎀</h2>
-      <p>Tengo 29 años, estudio la Tecnicatura Superior en Programación, amo a mi perro Teo🐶 y me apasiona crear cosas con código💻. 
-        🗺️Vivo en Coronel Pringles, Provincia de Buenos Aires, Argentina. 
-        Soy muy exigente por lo que busco perfeccionarme para continuar mejorando y reversionando las cosas que realizo. 
-        También soy una apasionada de la Historia📜 y me gusta combinar la programación con la docencia👩‍🏫.  
-      </p>
-    </section>
-
-    <section id="habilidades" class="seccion">
-      <h2>🧠Habilidades</h2>
-      <ul class="habilidades-lista">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>C#</li>
-        <li>Codeblocks</li>
-      </ul>
-    </section>
-
-    <section id="proyectos" class="seccion">
-      <h2>💻👧🔧Proyectos</h2>
-      <div class="proyectos-container">
-        <div class="tarjeta">
-          <h3>💻👧🔧Proyecto 1: La casa de hamburguesas Elena de Troya</h3>
-          <p>Es un proyecto de gestión desarrollado en CodeBlocks de una casa de hamburguesas destinado a poder ver varidades de menues, procesamiento de precios y datos de tanto clientes como trabajadores del emprendimiento.</p>
-          <a href="https://github.com/CamilaPascal892/Elena-de-Troya-Hamburgueser-a">Ver repositorio</a>
-        </div>
-        <div class="tarjeta">
-          <h3>💻👧🔧Proyecto 2: PaiLab</h3>
-          <p>Es un proyecto desarollado en #C que se encarga de la gestión de revendedores de distintos productos, puntos del país, beneficios de cada uno de ellos. También se pueden encontrar los datos de los administrativos que gestionan la reventa de productos.</p>
-          <a href="https://github.com/CamilaPascal892/PaiLabProyecto">Ver repositorio</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="seccion">
-      <h2>💌Contacto</h2>
-      <p>Podés escribirme a: <a href="mailto:camilabelenpascal@gmail.com">camilabelenpascal@gmail.com</a>. 
-      También me podés encontrar en mis redes sociales.</p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 - Portfolio de Camila Pascal</p>
-    </footer>
   </div>
 
-  <!-- MODAL -->
+  <!-- CONTENEDOR PRINCIPAL: FLOATING GLASS DASHBOARD (SPA TABS) -->
+  <main id="main-card" class="glass-card oculto">
+    
+    <!-- CARD HEADER (LOGO, NOMBRE Y MENÚ POLLOCK) -->
+    <header class="card-header">
+      <div class="brand-group">
+        <img src="img/logo.png" alt="Pascal Digital Logo" class="hero-logo-small" />
+        <h2>CAMILA PASCAL</h2>
+      </div>
+      
+      <!-- NAV SUPERIOR (ESTILO POLLOCK) -->
+      <nav class="nav-pollock">
+        <ul>
+          <li><a href="#" class="nav-link active" data-target="sobre-mi">Sobre mí</a></li>
+          <li><a href="#" class="nav-link" data-target="proyectos">Proyectos</a></li>
+          <li><a href="#" class="nav-link" data-target="contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CARD BODY (SPA PAGES) -->
+    <div class="card-body">
+      
+      <!-- SECCIÓN: SOBRE MÍ -->
+      <section id="sobre-mi" class="seccion active">
+        <div class="sobre-mi-container">
+          
+          <!-- Columna Izquierda: Biografía -->
+          <div class="sobre-mi-col-bio">
+            <span class="badge">Técnica Universitaria en Programación</span>
+            <h3>¿Quién soy?</h3>
+            <p>
+              Tengo 30 años, soy Técnica en Programación egresada de la Universidad Tecnológica Nacional (UTN) y me apasiona resolver problemas con sensibilidad, precisión y código limpio 💻.
+            </p>
+            <p>
+              Soy muy exigente con mis desarrollos, por lo que busco perfeccionarme constantemente para mejorar y reversionar las cosas que realizo. También soy una apasionada de la Historia 📜.
+            </p>
+            
+            <div class="sobre-mi-experiencia">
+              <h4>💼 Experiencia Laboral</h4>
+              <ul>
+                <li><strong>Desarrollo</strong>: Sistemas de escritorio en C++, C# y aplicaciones web (HTML, CSS, JS).</li>
+                <li><strong>Gestión de Redes</strong>: Planificación y desarrollo estratégico de canales digitales, produciendo contenido dinámico (video, storytelling) orientado al crecimiento y fidelización de comunidades.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Cursos & Habilidades -->
+          <div class="sobre-mi-col-cursos">
+            <h3>📜 Cursos & Certificaciones</h3>
+            <ul class="cursos-lista">
+              <li>
+                <strong>Tecnicatura en Marketing Digital</strong>
+                <span>Universidad Nacional Guillermo Brown (UNAB)</span>
+              </li>
+              <li>
+                <strong>Community Manager & Gestión de Portfolios</strong>
+                <span>Dam Marketing</span>
+              </li>
+              <li>
+                <strong>Marketing de Contenidos</strong>
+                <span>HubSpot Academy</span>
+              </li>
+              <li>
+                <strong>Digital MindSet</strong>
+                <span>IBM SkillsBuild</span>
+              </li>
+            </ul>
+
+            <h3>🧠 Habilidades</h3>
+            <div class="habilidades-tags">
+              <span>C#</span>
+              <span>HTML / CSS</span>
+              <span>JavaScript</span>
+              <span>Java</span>
+              <span>PHP</span>
+              <span>C++</span>
+              <span>SQL</span>
+              <span>Clean Code</span>
+              <span>Creación de Contenido</span>
+              <span>Edición de Video</span>
+              <span>Storytelling</span>
+              <span>Marketing Digital</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECCIÓN: PROYECTOS (CON FILTROS Y CAROUSEL INTERACTIVO) -->
+      <section id="proyectos" class="seccion">
+        <div class="proyectos-header">
+          <p class="proyectos-subtitle">Filtrá por tecnología y deslizá para ver las capturas de mis desarrollos.</p>
+          
+          <!-- Filtros de Proyectos -->
+          <div class="filtros-proyectos">
+            <button class="btn-filtro active" data-filter="all">Todos</button>
+            <button class="btn-filtro" data-filter="web">Desarrollo Web & Backend (React / PHP / Java)</button>
+            <button class="btn-filtro" data-filter="desktop">Sistemas de Escritorio (C# / C++)</button>
+          </div>
+        </div>
+
+        <!-- Slider / Carousel de Proyectos -->
+        <div class="slider-wrapper">
+          <button id="prevBtn" class="slider-btn prev">&larr;</button>
+          
+          <div class="slider-viewport">
+            <div class="slider-track">
+              
+              <div class="tarjeta" data-category="desktop">
+                <div class="tarjeta-img-container">
+                  <img src="img/screenshot_elena.png" alt="Captura Proyecto Elena de Troya" />
+                </div>
+                <div class="tarjeta-body">
+                  <h3>🍔 Elena de Troya</h3>
+                  <p>Sistema de gestión de hamburguesería desarrollado en CodeBlocks. Permite visualizar variedades de menús, procesar precios y administrar datos de clientes y trabajadores.</p>
+                  <div class="tags">
+                    <span>C++</span>
+                    <span>CodeBlocks</span>
+                  </div>
+                  <a href="https://github.com/CamilaPascal892/Elena-de-Troya-Hamburgueser-a" target="_blank">Ver repositorio</a>
+                </div>
+              </div>
+
+              <div class="tarjeta" data-category="desktop">
+                <div class="tarjeta-img-container">
+                  <img src="img/screenshot_pailab.png" alt="Captura Proyecto PaiLab" />
+                </div>
+                <div class="tarjeta-body">
+                  <h3>📦 PaiLab</h3>
+                  <p>Proyecto desarrollado en C# que se encarga de la gestión de revendedores de productos en distintas regiones de Argentina, control de puntos de venta y perfiles administrativos.</p>
+                  <div class="tags">
+                    <span>C#</span>
+                    <span>.NET</span>
+                  </div>
+                  <a href="https://github.com/CamilaPascal892/PaiLabProyecto" target="_blank">Ver repositorio</a>
+                </div>
+              </div>
+
+              <div class="tarjeta" data-category="web">
+                <div class="tarjeta-img-container">
+                  <img src="img/screenshot_pringles.png" alt="Captura Proyecto Pringles Reporta" />
+                </div>
+                <div class="tarjeta-body">
+                  <h3>📍 Pringles Reporta</h3>
+                  <p>Portal web de reporte ciudadano para Coronel Pringles. Los vecinos pueden registrar reclamos urbanos sobre un mapa interactivo de Leaflet y seguir su resolución en tiempo real.</p>
+                  <div class="tags">
+                    <span>React</span>
+                    <span>Spring Boot</span>
+                    <span>Leaflet</span>
+                  </div>
+                  <a href="https://github.com/CamilaPascal892" target="_blank">Ver repositorio</a>
+                </div>
+              </div>
+
+              <div class="tarjeta" data-category="web">
+                <div class="tarjeta-img-container">
+                  <img src="img/screenshot_stock.png" alt="Captura Proyecto Gestión de Stock" />
+                </div>
+                <div class="tarjeta-body">
+                  <h3>📊 Gestión de Stock</h3>
+                  <p>Software administrativo para el control de inventario de mercaderías. Permite registrar artículos, movimientos de caja, emitir comprobantes y recibir alertas por falta de stock.</p>
+                  <div class="tags">
+                    <span>React</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                  </div>
+                  <a href="https://github.com/CamilaPascal892" target="_blank">Ver repositorio</a>
+                </div>
+              </div>
+
+              <div class="tarjeta" data-category="web">
+                <div class="tarjeta-img-container">
+                  <img src="img/screenshot_animales.png" alt="Captura Proyecto Huellas Unidas" />
+                </div>
+                <div class="tarjeta-body">
+                  <h3>🐾 Huellas Unidas</h3>
+                  <p>Sistema de control de refugios y adopción animal en Java. Administra registros de mascotas, fichas de adoptantes aptos e historial de solicitudes aprobadas.</p>
+                  <div class="tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Hibernate</span>
+                    <span>MySQL</span>
+                  </div>
+                  <a href="https://github.com/CamilaPascal892/gestion-adopciones" target="_blank">Ver repositorio</a>
+                </div>
+              </div>
+
+              <div class="tarjeta" data-category="web">
+                <div class="tarjeta-img-container">
+                  <img src="img/screenshot_clinica.png" alt="Captura Proyecto Gestión Clínica" />
+                </div>
+                <div class="tarjeta-body">
+                  <h3>🏥 Gestión Clínica</h3>
+                  <p>Aplicación web SPA para la administración y reserva de turnos médicos en línea. Permite registrar pacientes, seleccionar especialidades y confirmar reservas con alertas interactivas.</p>
+                  <div class="tags">
+                    <span>React</span>
+                    <span>Vite</span>
+                    <span>SweetAlert2</span>
+                    <span>CSS</span>
+                  </div>
+                  <a href="https://github.com/CamilaPascal892/frontend-clinica" target="_blank">Ver repositorio</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <button id="nextBtn" class="slider-btn next">&rarr;</button>
+        </div>
+      </section>
+
+      <!-- SECCIÓN: CONTACTO -->
+      <section id="contacto" class="seccion">
+        <h2>💌 Contacto</h2>
+        <p class="contacto-desc">¿Tenés alguna consulta o propuesta? ¡Hablemos!</p>
+        
+        <div class="contacto-card">
+          <div class="contacto-item">
+            <span class="icon">📧</span>
+            <a href="mailto:pascalcamilabelen@gmail.com">pascalcamilabelen@gmail.com</a>
+          </div>
+          <div class="contacto-item">
+            <span class="icon">📸</span>
+            <a href="https://instagram.com/pascaldigital_tech" target="_blank">@pascaldigital_tech</a>
+          </div>
+          <div class="contacto-item">
+            <span class="icon">🐙</span>
+            <a href="https://github.com/CamilaPascal892" target="_blank">github.com/CamilaPascal892</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CARD FOOTER -->
+    <footer class="card-footer">
+      <p>&copy; 2026 - Portfolio de Camila Pascal - Pascal Digital</p>
+    </footer>
+  </main>
+
+  <!-- MODAL: ENFOQUE Y CAMINO (OPCIONAL DESDE SOBRE MÍ) -->
   <div id="modal" class="modal oculto">
     <div class="modal-content">
       <span id="cerrarModal" class="close">&times;</span>
       <h2>Un poco más sobre mí</h2>
       <p><strong>🎯 Enfoque como desarrolladora</strong></p>
       <p>Considero que programar no es solo escribir código, sino resolver problemas con sensibilidad y precisión. </p>
-      <p>💜 Creo en el aprendizaje constante y escribir código limpio.</p>
+      <p>💜 Creo en el aprendizaje constante y en escribir código limpio.</p>
       <p>🛠️ Me gusta entender a fondo los problemas antes de escribir una línea.</p>
       <p>🌱 Siempre estoy explorando nuevas herramientas y formas de mejorar.</p>
       <p><strong>🚀 Mi camino hasta ahora</strong></p>
       <ul>
         <li>2023 — Descubrí la programación 💡</li>
         <li>2024 — Aprendí a utilizar Codeblocks y realicé mis primeros pasos. 🚀</li>
-        <li>2025 — Continúe capacitándome y adquirí habilidades en C#, HTML, CSS, JavaScrip y base de datos. 📚</li>
-        <li>Hoy — En construcción...💻</li>
+        <li>2025 — Continúe capacitándome y adquirí habilidades en C#, HTML, CSS, JavaScript y base de datos. 📚</li>
+        <li>Hoy — Graduada y lista para nuevos desafíos. 💻</li>
       </ul>
     </div>
   </div>
